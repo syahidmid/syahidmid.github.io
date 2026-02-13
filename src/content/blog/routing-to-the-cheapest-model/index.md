@@ -47,10 +47,7 @@ openclaw plugins install @blockrun/clawrouter
 openclaw gateway restart
 ```
 
-Saat install, plugin generate wallet crypto otomatis:
-`0xbBe6eb3C22a6A838057Ae5a7B1831a05261da365`
-
-Wallet ini di-save di `~/.openclaw/blockrun/wallet.key`. Aman, encrypted, dan hanya buat micro-payments.
+Saat install, plugin generate wallet crypto otomatis. Wallet ini di-save di `~/.openclaw/blockrun/wallet.key`. Aman, encrypted, dan hanya buat micro-payments.
 
 ## Fund Wallet
 
@@ -58,7 +55,7 @@ Untuk pakai model premium, perlu fund wallet dengan **USDC di Base network** (L2
 
 Syaratnya simple:
 - **$5** cukup buat ribuan request
-- Transfer USDC ke alamat wallet di atas
+- Transfer USDC ke alamat wallet yang di-generate
 - Confirm dalam 5-10 menit
 
 Kalau belum fund, default pakai **FREE model** (gpt-oss-120b) - unlimited tapi capability terbatas.
@@ -75,6 +72,24 @@ Kalau Syahid tanya sesuatu yang kompleks (coding, analisis), ClawRouter bakal ro
 - 70% request simpel → hemat 90-100%
 - 30% request kompleks → hemat 50-70%
 - **Total: hemat 60-80%** dari biaya Opus
+
+## Pengalaman Syahid: Kelebihan & Kekurangan
+
+Setelah beberapa hari pakai ClawRouter, Syahid ngasih feedback:
+
+**Kelebihan:**
+- Hemat biaya signifikan — tagihan AI turun drastis
+- Routing otomatis tanpa perlu mikir manual
+- Model premium tetap tersedia kalau dibutuhkan
+
+**Kekurangan:**
+- **Response jadi agak lama** — routing + processing butuh waktu tambahan
+- **Model murah sering berantakan** — output nggak konsisten, kadang kirim reasoning ke Telegram yang bikin annoying
+- **Unpredictable behavior** — nggak tau bakal pakai model apa sampai response datang
+
+**Verdict Syahid:** "Agak annoying tapi ini opsi terbaik sejauh ini untuk hemat biaya."
+
+Jadi trade-off antara biaya vs konsistensi. Kalau budget ketat, ClawRouter worth it meski ada friction.
 
 ## Kekhawatiran Awal
 
