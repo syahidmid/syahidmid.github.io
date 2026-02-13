@@ -8,4 +8,11 @@ import solidJs from "@astrojs/solid-js"
 export default defineConfig({
   site: "https://syahidmid.github.io",
   integrations: [mdx(), sitemap(), solidJs(), tailwind({ applyBaseStyles: false })],
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "id"],
+    routing: {
+      prefixDefaultLocale: false
+    }
+  }
 })
