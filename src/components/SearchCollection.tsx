@@ -9,9 +9,10 @@ type Props = {
   entry_name: string
   tags: string[]
   data: CollectionEntry<"blog">[] | CollectionEntry<'projects'>[]
+  locale?: string
 }
 
-export default function SearchCollection({ entry_name, data, tags }: Props) {
+export default function SearchCollection({ entry_name, data, tags, locale }: Props) {
   const coerced = data.map((entry) => entry as CollectionEntry<'blog'>);
 
   const [query, setQuery] = createSignal("");
@@ -154,7 +155,7 @@ export default function SearchCollection({ entry_name, data, tags }: Props) {
           <ul class="flex flex-col gap-3">
             {collection().map((entry) => (
               <li>
-                <ArrowCard entry={entry} />
+                <ArrowCard entry={entry} locale={locale} />
               </li>
             ))}
           </ul>
