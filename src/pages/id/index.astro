@@ -8,7 +8,7 @@ import TwinklingStars from "@components/TwinklingStars.astro"
 import MeteorShower from "@components/MeteorShower.astro"
 
 const posts = (await getCollection("blog"))
-  .filter(post => !post.data.draft)
+  .filter(post => !post.data.draft && post.data.locale === "id")
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
   .slice(0,3)
 
